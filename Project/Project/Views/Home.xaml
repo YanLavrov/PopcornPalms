@@ -1,0 +1,99 @@
+﻿<Page x:Class="Project.Home"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Project" xmlns:vm="clr-namespace:Project.ViewModels"
+      mc:Ignorable="d" 
+      Height="900" Width="470"
+      Background="Transparent"
+      Title="Home">
+
+    <Page.DataContext>
+        <vm:HomeViewModel/>
+    </Page.DataContext>
+
+    <Grid Background="Transparent">
+        <Border MinWidth="200" MinHeight="200" Margin="15,0,15,0" VerticalAlignment="Center" Padding="30" MaxWidth="500" CornerRadius="55" Background="#050B19" Height="900">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="25" Color="Transparent" ShadowDepth="3"/>
+            </Border.Effect>
+        </Border>
+
+        <Border x:Name="Border1" CornerRadius="55" BorderBrush="#242635" Background="#141726" BorderThickness="1" Margin="15,791,15,0">
+            <Button Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Foreground="#EEEEEE" FontFamily="Roboto" FontSize="18" Style="{StaticResource TransparentButtonStyle}" HorizontalAlignment="Left" Width="48" Margin="35,14,0,26">
+                <Image Source="/Photos/HomeRed.png" Width="40" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Button>
+        </Border>
+        <Button x:Name="buttonTicket" Command="{Binding TicketCommand}" Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Foreground="#EEEEEE" FontFamily="Roboto" FontSize="18" Style="{StaticResource TransparentButtonStyle}" HorizontalAlignment="Left" Width="48" Margin="155,803,0,25">
+            <Image Source="/Photos/TicketsGray.png" Width="40" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Button>
+        <Button Command="{Binding SupportCommand}" Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Foreground="#EEEEEE" FontFamily="Roboto" FontSize="18" Style="{StaticResource TransparentButtonStyle}" HorizontalAlignment="Left" Width="48" Margin="269,803,0,25">
+            <Image Source="/Photos/HelpGray.png" Width="40" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Button>
+        <Button Command="{Binding ProfileCommand}" Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Foreground="#EEEEEE" FontFamily="Roboto" FontSize="18" Style="{StaticResource TransparentButtonStyle}" HorizontalAlignment="Left" Width="48" Margin="371,803,0,25">
+            <Image Source="/Photos/UserGray.png" Width="40" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Button>
+
+        <Image Source="/Photos/Notification.png" Stretch="Fill" Margin="380,93,60,777"/>
+        <Image Source="/Photos/LocationRed.png" Stretch="Fill" Margin="60,93,380,777"/>
+        <Label Content="Kyiv, Planet of cinema" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="96,95,0,0" Foreground="#B10808" FontFamily="Roboto" FontSize="14"/>
+
+
+        <!--Now at the cinema-->
+        <Label Content="Now at the cinema" FontFamily="Roboto" FontSize="22" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="#EEEEEE" Margin="60,155,0,0"/>
+        <Button Content="All" Cursor="Hand" Style="{StaticResource TransparentButtonStyle}" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Roboto" FontSize="14" Foreground="#D9D9D9" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Margin="395,164,0,0" Click="Button_Click_1"/>
+
+        <Button Command="{Binding FilmCommand}" Cursor="Hand" VerticalAlignment="Top" HorizontalAlignment="Left" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Style="{StaticResource TransparentButtonStyle}" Margin="60,217,0,0">
+            <Image Source="/Photos/AQuietPlace.png" Width="100" Height="154"/>
+        </Button>
+
+        <Label Content="2024, Fantasy" FontFamily="Roboto" FontSize="10" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="#B10808" Margin="60,373,0,0"/>
+        <Label Content="A Quiet Place:&#xD;&#xA;Day One" FontFamily="Roboto" FontSize="10" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="#EEEEEE" Margin="60,395,0,0"/>
+        <Border Background="#B10808" VerticalAlignment="Top" HorizontalAlignment="Left" BorderBrush="Transparent" BorderThickness="0" CornerRadius="4" Height="16" Margin="66,225,0,0">
+            <Label Content="10.0" Foreground="#EEEEEE" FontFamily="Roboto" FontSize="6"/>
+        </Border>
+
+        <Image Source="/Photos/Deadpool.png" Stretch="Fill" Margin="184,217,186,528"/>
+        <Label Content="2024, Fantasy" FontFamily="Roboto" FontSize="10" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="#B10808" Margin="184,373,0,0"/>
+        <Label Content="Deadpool / &#xD;&#xA;Wolverine" FontFamily="Roboto" FontSize="10" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="#EEEEEE" Margin="184,395,0,0"/>
+        <Border Background="#B10808" VerticalAlignment="Top" HorizontalAlignment="Left" BorderBrush="Transparent" BorderThickness="0" CornerRadius="4" Height="16" Margin="191,225,0,0">
+            <Label Content="8.5" Foreground="#EEEEEE" FontFamily="Roboto" FontSize="6"/>
+        </Border>
+
+
+        <Image Source="/Photos/Trap.png" Stretch="Fill" Margin="308,217,62,528"/>
+        <Label Content="2024, Thriller" FontFamily="Roboto" FontSize="10" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="#B10808" Margin="308,373,0,0"/>
+        <Label Content="Trap" FontFamily="Roboto" FontSize="10" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="#EEEEEE" Margin="308,395,0,0"/>
+        <Border Background="#B10808" VerticalAlignment="Top" HorizontalAlignment="Left" BorderBrush="Transparent" BorderThickness="0" CornerRadius="4" Height="16" Margin="316,225,0,0">
+            <Label Content="8.0" Foreground="#EEEEEE" FontFamily="Roboto" FontSize="6"/>
+        </Border>
+        <!--Now at the cinema-->
+
+        <!--Announcements-->
+        <Label Content="Announcements" FontFamily="Roboto" FontSize="22" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="#EEEEEE" Margin="60,450,0,0"/>
+        <Button Content="All" Cursor="Hand" Style="{StaticResource TransparentButtonStyle}" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Roboto" FontSize="14" Foreground="#D9D9D9" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Margin="395,455,0,0" Click="Button_Click_1"/>
+
+        <Image Source="/Photos/Exorcism.png" Stretch="Fill" Margin="60,511,310,234"/>
+        <Label Content="2024, Horrors" FontFamily="Roboto" FontSize="10" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="#B10808" Margin="60,667,0,0"/>
+        <Label Content="The Exorcism" FontFamily="Roboto" FontSize="10" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="#EEEEEE" Margin="60,689,0,0"/>
+
+        <Image Source="/Photos/Me4.png" Stretch="Fill" Margin="184,511,186,234"/>
+        <Label Content="2024, Comedy" FontFamily="Roboto" FontSize="10" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="#B10808" Margin="184,667,0,0"/>
+        <Label Content="Despicable Me 4" FontFamily="Roboto" FontSize="10" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="#EEEEEE" Margin="184,689,0,0"/>
+
+        <Image Source="/Photos/Garfield.png" Stretch="Fill" Margin="308,511,62,234"/>
+        <Label Content="2024, Comedy" FontFamily="Roboto" FontSize="10" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="#B10808" Margin="308,667,0,0"/>
+        <Label Content="The Garfield Movie" FontFamily="Roboto" FontSize="10" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="#EEEEEE" Margin="308,689,0,0"/>
+        <!--Announcements-->
+
+        <!--Time, Dynamic, Wi-fi...-->
+        <Label x:Name="Time" Margin="75,35,0,833" Foreground="#B3B3B3"  HorizontalAlignment="Left" FontSize="20" FontFamily="San Francisco" FontWeight="SemiBold"/>
+        <Image Source="/Photos/DynamicIsland.png" Stretch="Fill" Margin="155,26,155,824"/>
+        <Image Source="/Photos/Wi-fi.png" Stretch="Fill" Margin="345,39,43,837"/>
+        <Button Command="{Binding CloseCommand}" Style="{StaticResource TransparentButtonStyle}" Cursor="Hand" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" HorizontalAlignment="Center" Margin="0,878,0,10">
+            <Image Source="/Photos/HomeBar.png" Stretch="Fill" Height="10" Width="188" />
+        </Button>
+
+    </Grid>
+</Page>

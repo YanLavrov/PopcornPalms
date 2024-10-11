@@ -1,0 +1,70 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\\u0423\u043D\u0438\u0432\u0435\u0440\\4 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0422\u0421\u041F\u041F (\u041A\u043E\u0442\u0438\u043A)\\PopcornPalms\\Project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{97D4CA27-F414-4C88-AD92-0C831A1FF9ED}|Project\\Project.csproj|d:\\\u0443\u043D\u0438\u0432\u0435\u0440\\4 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0442\u0441\u043F\u043F (\u043A\u043E\u0442\u0438\u043A)\\popcornpalms\\project\\project\\dataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97D4CA27-F414-4C88-AD92-0C831A1FF9ED}|Project\\Project.csproj|solutionrelative:project\\dataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97D4CA27-F414-4C88-AD92-0C831A1FF9ED}|Project\\Project.csproj|d:\\\u0443\u043D\u0438\u0432\u0435\u0440\\4 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0442\u0441\u043F\u043F (\u043A\u043E\u0442\u0438\u043A)\\popcornpalms\\project\\project\\views\\adminanswerquestion.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{97D4CA27-F414-4C88-AD92-0C831A1FF9ED}|Project\\Project.csproj|solutionrelative:project\\views\\adminanswerquestion.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97D4CA27-F414-4C88-AD92-0C831A1FF9ED}|Project\\Project.csproj|d:\\\u0443\u043D\u0438\u0432\u0435\u0440\\4 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0442\u0441\u043F\u043F (\u043A\u043E\u0442\u0438\u043A)\\popcornpalms\\project\\project\\viewmodels\\adminmainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97D4CA27-F414-4C88-AD92-0C831A1FF9ED}|Project\\Project.csproj|solutionrelative:project\\viewmodels\\adminmainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DataAccess.cs",
+              "DocumentMoniker": "D:\\\u0423\u043D\u0438\u0432\u0435\u0440\\4 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0422\u0421\u041F\u041F (\u041A\u043E\u0442\u0438\u043A)\\PopcornPalms\\Project\\Project\\DataAccess.cs",
+              "RelativeDocumentMoniker": "Project\\DataAccess.cs",
+              "ToolTip": "D:\\\u0423\u043D\u0438\u0432\u0435\u0440\\4 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0422\u0421\u041F\u041F (\u041A\u043E\u0442\u0438\u043A)\\PopcornPalms\\Project\\Project\\DataAccess.cs",
+              "RelativeToolTip": "Project\\DataAccess.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T16:48:36.207Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AdminAnswerQuestion.xaml",
+              "DocumentMoniker": "D:\\\u0423\u043D\u0438\u0432\u0435\u0440\\4 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0422\u0421\u041F\u041F (\u041A\u043E\u0442\u0438\u043A)\\PopcornPalms\\Project\\Project\\Views\\AdminAnswerQuestion.xaml",
+              "RelativeDocumentMoniker": "Project\\Views\\AdminAnswerQuestion.xaml",
+              "ToolTip": "D:\\\u0423\u043D\u0438\u0432\u0435\u0440\\4 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0422\u0421\u041F\u041F (\u041A\u043E\u0442\u0438\u043A)\\PopcornPalms\\Project\\Project\\Views\\AdminAnswerQuestion.xaml",
+              "RelativeToolTip": "Project\\Views\\AdminAnswerQuestion.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-08T15:47:46.084Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AdminMainViewModel.cs",
+              "DocumentMoniker": "D:\\\u0423\u043D\u0438\u0432\u0435\u0440\\4 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0422\u0421\u041F\u041F (\u041A\u043E\u0442\u0438\u043A)\\PopcornPalms\\Project\\Project\\ViewModels\\AdminMainViewModel.cs",
+              "RelativeDocumentMoniker": "Project\\ViewModels\\AdminMainViewModel.cs",
+              "ToolTip": "D:\\\u0423\u043D\u0438\u0432\u0435\u0440\\4 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0422\u0421\u041F\u041F (\u041A\u043E\u0442\u0438\u043A)\\PopcornPalms\\Project\\Project\\ViewModels\\AdminMainViewModel.cs",
+              "RelativeToolTip": "Project\\ViewModels\\AdminMainViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T15:48:04.094Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

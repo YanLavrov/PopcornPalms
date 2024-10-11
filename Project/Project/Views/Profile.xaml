@@ -1,0 +1,88 @@
+﻿<Page x:Class="Project.Profile"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Project" xmlns:vm="clr-namespace:Project.ViewModels"
+      mc:Ignorable="d" 
+      Height="900" Width="470"
+      Background="Transparent"
+      Title="Home">
+
+    <Page.DataContext>
+        <vm:ProfileViewModel/>
+    </Page.DataContext>
+
+    <Grid Background="Transparent">
+        <Border MinWidth="200" MinHeight="200" Margin="15,0,15,0" VerticalAlignment="Center" Padding="30" MaxWidth="500" CornerRadius="55" Background="#050B19" Height="900">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="25" Color="Transparent" ShadowDepth="3"/>
+            </Border.Effect>
+        </Border>
+
+        <Border x:Name="Border1" CornerRadius="55" BorderBrush="#242635" Background="#141726" BorderThickness="1" Margin="15,791,15,0">
+            <Button Command="{Binding MainCommand}" Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Foreground="#EEEEEE" FontFamily="Roboto" FontSize="18" Style="{StaticResource TransparentButtonStyle}" HorizontalAlignment="Left" Width="48" Margin="35,14,0,26">
+                <Image Source="/Photos/HomeGray.png" Width="40" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Button>
+        </Border>
+        <Button Command="{Binding TicketCommand}" Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Foreground="#EEEEEE" FontFamily="Roboto" FontSize="18" Style="{StaticResource TransparentButtonStyle}" HorizontalAlignment="Left" Width="48" Margin="155,803,0,25">
+            <Image Source="/Photos/TicketsGray.png" Width="40" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Button>
+        <Button Command="{Binding SupportCommand}" Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Foreground="#EEEEEE" FontFamily="Roboto" FontSize="18" Style="{StaticResource TransparentButtonStyle}" HorizontalAlignment="Left" Width="48" Margin="269,803,0,25">
+            <Image Source="/Photos/HelpGray.png" Width="40" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Button>
+        <Button Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Foreground="#EEEEEE" FontFamily="Roboto" FontSize="18" Style="{StaticResource TransparentButtonStyle}" HorizontalAlignment="Left" Width="48" Margin="371,803,0,25">
+            <Image Source="/Photos/UserRed.png" Width="40" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Button>
+
+        <!--Time, Dynamic, Wi-fi...-->
+        <Label x:Name="Time" Margin="75,35,0,833" Foreground="#B3B3B3"  HorizontalAlignment="Left" FontSize="20" FontFamily="San Francisco" FontWeight="SemiBold"/>
+        <Image Source="/Photos/DynamicIsland.png" Stretch="Fill" Margin="155,26,155,824"/>
+        <Image Source="/Photos/Wi-fi.png" Stretch="Fill" Margin="345,39,43,837"/>
+        <Button Command="{Binding CloseCommand}" Style="{StaticResource TransparentButtonStyle}" Cursor="Hand" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" HorizontalAlignment="Center" Margin="0,878,0,10">
+            <Image Source="/Photos/HomeBar.png" Stretch="Fill" Height="10" Width="188" />
+        </Button>
+        <Image Source="/Photos/Notification.png" Stretch="Fill" Margin="380,93,60,777"/>
+
+        <Image Source="/Photos/LocationRed.png" Stretch="Fill" Margin="60,93,380,777"/>
+        <Label Content="Kyiv, Planet of cinema" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="96,95,0,0" Foreground="#B10808" FontFamily="Roboto" FontSize="14"/>
+
+        <!--Profile Border-->
+        <Border CornerRadius="6" BorderBrush="#1D1F2B" Background="#1D1F2B" Margin="60,173,60,613" Height="114"/>
+        <Label x:Name="profileName" Margin="75,201,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#EEEEEE" FontFamily="Roboto" FontSize="16"/>
+        <Label x:Name="profileNumber" Margin="75,238,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#D9D9D9" FontFamily="Roboto" FontSize="12"/>
+        <Image Source="/Photos/Edit.png" Stretch="Fill" Margin="374,218,72,658"/>
+        <!--Profile Border-->
+
+        <!--CreditCards-->
+        <Border CornerRadius="6" BorderBrush="#1D1F2B" Background="#1D1F2B" Margin="60,299,60,561" Height="40"/>
+        <Image Source="/Photos/Credit-Card.png" Stretch="Fill" Margin="80,307,366,569"/>
+        <Label Content="Credit cards" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Roboto" FontSize="12" Foreground="#EEEEEE" Margin="113,307,0,0" FontWeight="Light"/>
+        <Button Margin="60,299,60,561" Command="{Binding CreditCardCommand}" Style="{StaticResource TransparentButtonStyle}" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Cursor="Hand" />
+        <!--CreditCards-->
+
+        <!--Bonuses-->
+        <Border CornerRadius="6" BorderBrush="#1D1F2B" Background="#1D1F2B" Margin="60,351,60,509" Height="40"/>
+        <Image Source="/Photos/Coin.png" Stretch="Fill" Margin="80,359,366,517"/>
+        <Label Content="Bonuses" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Roboto" FontSize="12" Foreground="#EEEEEE" Margin="113,359,0,0" FontWeight="Light"/>
+        <!--Bonuses-->
+
+        <!--Help-->
+        <Border CornerRadius="6" BorderBrush="#1D1F2B" Background="#1D1F2B" Margin="60,403,60,457" Height="40"/>
+        <Image Source="/Photos/HelpGray.png" Stretch="Fill" Margin="80,411,366,465"/>
+        <Label Content="Help" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Roboto" FontSize="12" Foreground="#EEEEEE" Margin="113,411,0,0" FontWeight="Light"/>
+        <Button Command="{Binding SupportCommand}" Cursor="Hand" Style="{StaticResource TransparentButtonStyle}" Margin="60,403,60,457" Background="Transparent" BorderBrush="Transparent" BorderThickness="0 "/>
+        <!--Help-->
+
+        <!--Support-->
+        <Border CornerRadius="6" BorderBrush="#1D1F2B" Background="#1D1F2B" Margin="60,456,60,404" Height="40"/>
+        <Image Source="/Photos/Support.png" Stretch="Fill" Margin="80,464,366,412"/>
+        <Label Content="Support" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Roboto" FontSize="12" Foreground="#EEEEEE" Margin="113,464,0,0" FontWeight="Light"/>
+        <Button Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Margin="60,456,60,404" Command="{Binding SupportCommand}" Cursor="Hand" Style="{StaticResource TransparentButtonStyle}"/>
+        <!--Support-->
+
+        <!--Button Log out-->
+        <Button Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Command="{Binding LogOutCommand}" Cursor="Hand" Content="Log out of account" Foreground="#B10808" FontFamily="Roboto" FontSize="18" Style="{StaticResource TransparentButtonStyle}" Margin="137,725,121,151"/>
+        <Image Source="/Photos/Exit.png" Stretch="Fill" Margin="137,725,309,151"/>
+    </Grid>
+</Page>

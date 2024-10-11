@@ -1,0 +1,69 @@
+﻿<Page x:Class="Project.Description"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Project" xmlns:vm="clr-namespace:Project.ViewModels"
+      mc:Ignorable="d" 
+      Height="900" Width="470"
+      Background="Transparent"
+      Title="Home">
+
+    <Page.DataContext>
+        <vm:DescriptionViewModel/>
+    </Page.DataContext>
+
+    <Grid Background="Transparent">
+        <Border MinWidth="200" MinHeight="200" Margin="15,0,15,0" VerticalAlignment="Center" Padding="30" MaxWidth="500" CornerRadius="55" Background="#050B19" Height="900">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="25" Color="Transparent" ShadowDepth="3"/>
+            </Border.Effect>
+        </Border>
+
+        <Border x:Name="Border1" CornerRadius="55" BorderBrush="#242635" Background="#141726" BorderThickness="1" Margin="15,791,15,0">
+            <Button Command="{Binding MainCommand}" Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Foreground="#EEEEEE" FontFamily="Roboto" FontSize="18" Style="{StaticResource TransparentButtonStyle}" HorizontalAlignment="Left" Width="48" Margin="35,14,0,26">
+                <Image Source="/Photos/HomeGray.png" Width="40" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Button>
+        </Border>
+        <Button Command="{Binding TicketCommand}" Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Foreground="#EEEEEE" FontFamily="Roboto" FontSize="18" Style="{StaticResource TransparentButtonStyle}" HorizontalAlignment="Left" Width="48" Margin="155,803,0,25">
+            <Image Source="/Photos/TicketsGray.png" Width="40" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Button>
+        <Button Command="{Binding SupportCommand}" Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Foreground="#EEEEEE" FontFamily="Roboto" FontSize="18" Style="{StaticResource TransparentButtonStyle}" HorizontalAlignment="Left" Width="48" Margin="269,803,0,25">
+            <Image Source="/Photos/HelpGray.png" Width="40" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Button>
+        <Button Command="{Binding ProfileCommand}" Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Foreground="#EEEEEE" FontFamily="Roboto" FontSize="18" Style="{StaticResource TransparentButtonStyle}" HorizontalAlignment="Left" Width="48" Margin="371,803,0,25">
+            <Image Source="/Photos/UserGray.png" Width="40" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Button>
+
+        <Image Source="/Photos/AQuietDesk.png" Stretch="Fill" Margin="15,0,15,608"/>
+        <Border CornerRadius="6" Background="#B10808" Margin="47,237,47,623">
+            <Button Command="{Binding BuyTicketCommand}" Background="Transparent" Cursor="Hand" Content="Buy ticket" BorderBrush="Transparent" FontFamily="Roboto" Foreground="#EEEEEE" FontSize="18" Style="{StaticResource TransparentButtonStyle}"/>
+        </Border>
+
+        <Label Content="Description" FontFamily="Roboto" FontSize="18" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="#EEEEEE" Margin="47,319,0,0" RenderTransformOrigin="0.554,0.538"/>
+        <Button Content="Full" Cursor="Hand" Style="{StaticResource TransparentButtonStyle}" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Roboto" FontSize="14" Foreground="#D9D9D9" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Margin="401,328,0,0" Click="Button_Click"/>
+
+        <TextBlock TextWrapping="Wrap" LineHeight="24" Foreground="#808080" FontFamily="Roboto" FontSize="16" Text="A young woman named Samira, long resigned to the fact that she is dying of cancer, takes a bus to New York to watch a puppet show and eat her favorite pizza. On her way back, she finds herself in the midst of a bloodbath: the Earth is under attack by deadly creatures from outer space that navigate by hearing." Margin="47,366,47,390"/>
+
+        <Label Content="Trailer" FontFamily="Roboto" FontSize="18" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="#EEEEEE" Margin="47,539,0,0" RenderTransformOrigin="0.756,0.548"/>
+
+        <Grid>
+            <MediaElement Name="mediaElement" LoadedBehavior="Manual" Margin="-10,575,-6,119" />
+            <Button x:Name="PlayvsPause" Cursor="Hand" Style="{StaticResource TransparentButtonStyle}" Background="Transparent" VerticalAlignment="Top" HorizontalAlignment="Left" BorderBrush="Transparent" BorderThickness="0" Width="34" Height="30" Margin="216,753,0,0" Click="Play_Click">
+                <Image x:Name="Image" Source="/Photos/PlayerPlay.png" Stretch="Fill" Height="24" Width="27"/>
+            </Button>
+        </Grid>
+        
+        <!--Time, Dynamic, Wi-fi...-->
+        <Image Source="/Photos/DynamicIsland.png" Stretch="Fill" Margin="155,26,155,824"/>
+        <Label x:Name="Time" Margin="75,35,0,833" Foreground="#B3B3B3"  HorizontalAlignment="Left" FontSize="20" FontFamily="San Francisco" FontWeight="SemiBold"/>
+        <Image Source="/Photos/Wi-fi.png" Stretch="Fill" Margin="345,39,43,837"/>
+        <Button Command="{Binding CloseCommand}" Style="{StaticResource TransparentButtonStyle}" Cursor="Hand" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" HorizontalAlignment="Center" Margin="0,878,0,10">
+            <Image Source="/Photos/HomeBar.png" Stretch="Fill" Height="10" Width="188" />
+        </Button>
+
+
+
+
+    </Grid>
+</Page>

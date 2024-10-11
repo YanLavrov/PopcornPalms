@@ -1,0 +1,63 @@
+﻿<Page x:Class="Project.Popcorn"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:vm="clr-namespace:Project.ViewModels"
+      mc:Ignorable="d" 
+      Height="900" Width="470"
+      Background="Transparent"
+      Title="Home">
+
+    <Page.DataContext>
+        <vm:PopcornViewModel/>
+    </Page.DataContext>
+
+    <Grid Background="Transparent">
+        <Border MinWidth="200" MinHeight="200" Margin="15,0,15,0" VerticalAlignment="Center" Padding="30" MaxWidth="500" CornerRadius="55" Background="#050B19" Height="900">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="25" Color="Transparent" ShadowDepth="3"/>
+            </Border.Effect>
+        </Border>
+
+        <Image Source="/Photos/PopcornBar.png" Stretch="Fill" Margin="15,0,15,608"/>
+        <!--Time, Dynamic, Wi-fi...-->
+        <Label x:Name="Time" Margin="75,35,0,833" Foreground="#B3B3B3"  HorizontalAlignment="Left" FontSize="20" FontFamily="San Francisco" FontWeight="SemiBold"/>
+        <Image Source="/Photos/DynamicIsland.png" Stretch="Fill" Margin="155,26,155,824"/>
+        <Image Source="/Photos/Wi-fi.png" Stretch="Fill" Margin="345,39,43,837"/>
+        <Button Command="{Binding CloseCommand}" Style="{StaticResource TransparentButtonStyle}" Cursor="Hand" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" HorizontalAlignment="Center" Margin="0,878,0,10">
+            <Image Source="/Photos/HomeBar.png" Stretch="Fill" Height="10" Width="188" />
+        </Button>
+
+        <Button Command="{Binding SkipCommand}" Style="{StaticResource TransparentButtonStyle}" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Content="Skip" VerticalAlignment="Top" FontFamily="Roboto" FontSize="19" Foreground="#808080" Cursor="Hand" Margin="378,111,56,0"/>
+
+        <TextBlock TextWrapping="Wrap" Text="Would you like to choose popcorn for your session?" Margin="84,234,84,0" FontFamily="Roboto" FontSize="18" Foreground="#EEEEEE" VerticalAlignment="Top" TextAlignment="Center"/>
+
+        <Button x:Name="Butt1L" Cursor="Hand" Style="{StaticResource TransparentButtonStyle}" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Click="Button_Click" Margin="60,376,334,423">
+            <Image Source="/Photos/Bucket.png" Stretch="Fill" Height="100"/>
+        </Button>
+        <Label x:Name="l1" Content="   1,5L &#xD;&#xA;80 UAH" FontFamily="Roboto" FontSize="16" Foreground="#887A7A" Margin="65,482,339,364"/>
+
+        <Button x:Name="Butt3L" Cursor="Hand" Style="{StaticResource TransparentButtonStyle}" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Click="Butt3L_Click" Margin="184,343,194,423">
+            <Image Source="/Photos/Bucket.png" Stretch="Fill"/>
+        </Button>
+        <Label x:Name="l3" Content="      3L &#xD;&#xA;150 UAH" FontFamily="Roboto" FontSize="16" Foreground="#887A7A" Margin="191,482,201,364"/>
+
+        <Button x:Name="Butt5L" Cursor="Hand" Style="{StaticResource TransparentButtonStyle}" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Click="Butt5L_Click" Margin="311,318,53,423">
+            <Image Source="/Photos/Bucket.png" Stretch="Fill"/>
+        </Button>
+        <Label x:Name="l5" Content="      5L &#xD;&#xA;220 UAH" FontFamily="Roboto" FontSize="16" Foreground="#887A7A" Margin="324,482,66,370"/>
+
+        <Border CornerRadius="6" Background="#B10808" Margin="60,812,53,48">
+            <Button Background="Transparent" Cursor="Hand" Content="Go to the payment" BorderBrush="Transparent" FontFamily="Roboto" Foreground="#EEEEEE" FontSize="18" Style="{StaticResource TransparentButtonStyle}" Height="40" VerticalAlignment="Top" Click="Button_Click_1"/>
+        </Border>
+
+        <Button x:Name="Caramel" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Content="With caramel" Foreground="#887A7A" FontFamily="Roboto" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,563,0,0" Height="33" Width="73" Click="Caramel_Click"/>
+        <Button x:Name="Fruit" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Content="Fruit" Foreground="#887A7A" FontFamily="Roboto" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="155,563,0,0" Height="33" Width="72" Click="Fruit_Click"/>
+        <Button x:Name="Cheese" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Content="With cheese" Foreground="#887A7A" FontFamily="Roboto" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="252,563,0,0" Height="33" Width="72" Click="Cheese_Click"/>
+        <Button x:Name="Bacon" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Content="With bacon" Foreground="#887A7A" FontFamily="Roboto" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="345,563,0,0" Height="33" Width="72" Click="Bacon_Click"/>
+
+
+        <Label Content="Total" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Roboto" FontSize="19" Foreground="#EEEEEE" Margin="60,755,0,0"/>
+        <Label x:Name="totalLabel" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Roboto" FontSize="20" Foreground="#EEEEEE" Margin="333,755,0,0"/>
+    </Grid>
+</Page>

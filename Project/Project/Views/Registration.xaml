@@ -1,0 +1,76 @@
+﻿<Page x:Class="Project.Registration"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Project" xmlns:vm="clr-namespace:Project.ViewModels"
+      mc:Ignorable="d" 
+      Height="900" Width="470"
+      Background="Transparent"
+      Title="Registration">
+
+    <Page.DataContext>
+        <vm:RegistrationViewModel/>
+    </Page.DataContext>
+
+    <Grid Background="Transparent">
+        <Border MinWidth="200" MinHeight="200" Margin="15,0,15,0" VerticalAlignment="Center" Padding="30" MaxWidth="500" CornerRadius="55" Background="#050B19" Height="900">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="25" Color="Transparent" ShadowDepth="3"/>
+            </Border.Effect>
+        </Border>
+
+        <!--Content-->
+        <Label Content="Welcome!" FontFamily="Roboto" FontSize="32" Foreground="#EEEEEE" Margin="156,130,156,722"/>
+        <Label Content="   Enter your full name, login and &#xD;&#xA;phone number to login or register!" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Roboto" FontSize="16" Foreground="#D9D9D9" Margin="0,181,0,0"/>
+        <Label Content="or login using" FontFamily="Roboto" FontSize="14" Foreground="#D9D9D9" Margin="0,689,0,0" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+        <!--Content-->
+
+        <!--Time, Dynamic, Wi-fi...-->
+        <Label x:Name="Time" Margin="75,35,0,833" Foreground="#B3B3B3"  HorizontalAlignment="Left" FontSize="20" FontFamily="San Francisco" FontWeight="SemiBold"/>
+        <Image Source="/Photos/DynamicIsland.png" Stretch="Fill" Margin="155,26,155,824"/>
+        <Image Source="/Photos/Wi-fi.png" Stretch="Fill" Margin="345,39,43,837"/>
+        <Button Command="{Binding CloseCommand}" Style="{StaticResource TransparentButtonStyle}" Cursor="Hand" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" HorizontalAlignment="Center" Margin="0,878,0,10">
+            <Image Source="/Photos/HomeBar.png" Stretch="Fill" Height="10" Width="188" />
+        </Button>
+
+        <!--TextBox Input-->
+        <Border CornerRadius="8" Height="60" Background="#1D1F2B" BorderThickness="1" VerticalAlignment="Top" UseLayoutRounding="True" Margin="36,262,36,0">
+            <TextBox Text="Full name" x:Name="input_name" BorderThickness="0" VerticalAlignment="Top"  Background="Transparent"  FontFamily="Roboto" FontSize="18" Margin="12,18,6,0" Foreground="#DC0000" Height="24"/>
+        </Border>
+        <Border CornerRadius="8" Height="60" Background="#1D1F2B" BorderThickness="1" VerticalAlignment="Top" UseLayoutRounding="True" Margin="36,342,36,0">
+            <TextBox Text="Login" x:Name="input_login" BorderThickness="0" VerticalAlignment="Top"  Background="Transparent"  FontFamily="Roboto" FontSize="18" Margin="12,18,6,0" Foreground="#DC0000" Height="24"/>
+        </Border>
+        <Border CornerRadius="8" Height="60" Background="#1D1F2B" BorderThickness="1" VerticalAlignment="Top" UseLayoutRounding="True" Margin="36,422,36,0">
+            <TextBox Text="Phone number" x:Name="input_number" BorderThickness="0" VerticalAlignment="Top"  Background="Transparent"  FontFamily="Roboto" FontSize="18" Margin="12,18,6,0" Foreground="#DC0000" Height="24"/>
+        </Border>
+        <Border CornerRadius="8" Height="60" Background="#1D1F2B" BorderThickness="1" VerticalAlignment="Top" UseLayoutRounding="True" Margin="36,502,36,0">
+            <TextBox Text="Password" x:Name="input_password" BorderThickness="0" VerticalAlignment="Center"  Background="Transparent"  FontFamily="Roboto" FontSize="18" Margin="12,0,6,0" Foreground="#DC0000" Height="24"/>
+        </Border>
+        <!--TextBox Input-->
+
+        <!--Button "Register"-->
+        <Border CornerRadius="8" Background="#B10808" BorderBrush="#B10808" Height="60" VerticalAlignment="Top" UseLayoutRounding="True" Margin="36,594,36,0">
+            <Button Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Content="Register" Foreground="#EEEEEE" FontFamily="Roboto" FontSize="20" Style="{StaticResource TransparentButtonStyle}" Click="Button_Click"/>
+        </Border>
+        <!--Button "Register"-->
+
+        <!--Button "Login"-->
+        <Border CornerRadius="8" Background="#1D1F2B" BorderBrush="#1D1F2B" Height="50" Width="50" VerticalAlignment="Top" UseLayoutRounding="True" Margin="141,730,279,0">
+            <Button Command="{Binding GoogleAuth}" Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Foreground="#EEEEEE" FontFamily="Roboto" FontSize="18" Style="{StaticResource TransparentButtonStyle}" HorizontalAlignment="Center" Width="48" Margin="0,0,0,1">
+                <Image Source="/Photos/GoogleAuth.png" Width="18" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Button>
+        </Border>
+        <Border CornerRadius="8" Background="#1D1F2B" BorderBrush="#1D1F2B" Height="50" Width="50" VerticalAlignment="Top" UseLayoutRounding="True" Margin="210,730,210,0">
+            <Button Command="{Binding FacebookAuth}" Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Foreground="#EEEEEE" FontFamily="Roboto" FontSize="18" Style="{StaticResource TransparentButtonStyle}" HorizontalAlignment="Center" Width="48" Margin="0,0,0,1">
+                <Image Source="/Photos/FacebookAuth.png" Width="10" Height="19" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+            </Button>
+        </Border>
+        <Border CornerRadius="8" Background="#1D1F2B" BorderBrush="#1D1F2B" Height="50" Width="50" VerticalAlignment="Top" UseLayoutRounding="True" Margin="279,730,141,0">
+            <Button Command="{Binding AppleAuth}" Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Foreground="#EEEEEE" FontFamily="Roboto" FontSize="18" Style="{StaticResource TransparentButtonStyle}" HorizontalAlignment="Left" Width="48" Margin="2,0,0,1">
+                <Image Source="/Photos/AppleAuth.png" Width="23" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Button>
+        </Border>
+
+    </Grid>
+</Page>

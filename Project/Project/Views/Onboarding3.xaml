@@ -1,0 +1,47 @@
+﻿<Page x:Class="Project.Onboarding3"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Project" 
+      xmlns:vm="clr-namespace:Project.ViewModels"
+      mc:Ignorable="d" 
+      Height="900" Width="470"
+      Background="Transparent"
+      Title="Home">
+
+    <Page.DataContext>
+        <vm:Onboarding3ViewModel/>
+    </Page.DataContext>
+
+    <Grid Background="Transparent">
+        <Border MinWidth="200" MinHeight="200" Margin="15,0,15,0" VerticalAlignment="Center" Padding="30" MaxWidth="500" CornerRadius="55" Background="#010307" Height="900">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="25" Color="Transparent" ShadowDepth="3"/>
+            </Border.Effect>
+        </Border>
+
+
+        <Image Source="/Photos/Onboard3.png" Stretch="Fill" Margin="15,252,15,0"/>
+
+        <Label Content="Food without queues" FontSize="28" Foreground="#EEEEEE" FontFamily="Roboto" Margin="100,656,100,200"/>
+        <TextBlock Text="Order popcorn and drinks right from your phone" TextWrapping="Wrap" TextAlignment="Center" FontSize="19" Foreground="#EEEEEE" FontFamily="Roboto" Margin="87,714,87,136"/>
+
+
+        <Border CornerRadius="6" Background="#B10808" Margin="57,778,56,74">
+            <Button Command="{Binding ContinueCommand}" Background="Transparent" Cursor="Hand" Content="Continue" BorderBrush="Transparent" FontFamily="Roboto" Foreground="#EEEEEE" FontSize="18" Style="{StaticResource TransparentButtonStyle}"/>
+        </Border>
+
+        <Button Command="{Binding SkipCommand}" Style="{StaticResource TransparentButtonStyle}" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Content="Skip" VerticalAlignment="Top" FontFamily="Roboto" FontSize="19" Foreground="#808080" Cursor="Hand" Margin="378,111,56,0"/>
+
+        <Image Source="/Photos/PageControl3.png" Stretch="Fill" Margin="39,826,38,30" Width="393" Height="44"/>
+
+        <!--Time, Dynamic, Wi-fi...-->
+        <Label x:Name="Time" Margin="75,35,0,833" Foreground="#B3B3B3"  HorizontalAlignment="Left" FontSize="20" FontFamily="San Francisco" FontWeight="SemiBold"/>
+        <Image Source="/Photos/DynamicIsland.png" Stretch="Fill" Margin="155,26,155,824"/>
+        <Image Source="/Photos/Wi-fi.png" Stretch="Fill" Margin="345,39,43,837"/>
+        <Button Command="{Binding CloseCommand}" Style="{StaticResource TransparentButtonStyle}" Cursor="Hand" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" HorizontalAlignment="Center" Margin="0,878,0,10">
+            <Image Source="/Photos/HomeBar.png" Stretch="Fill" Height="10" Width="188" />
+        </Button>
+    </Grid>
+</Page>

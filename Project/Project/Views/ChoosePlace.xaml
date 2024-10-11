@@ -1,0 +1,271 @@
+﻿<Page x:Class="Project.ChoosePlace"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Project" xmlns:vm="clr-namespace:Project.ViewModels"
+      mc:Ignorable="d" 
+      Height="900" Width="470"
+      Background="Transparent"
+      Title="Home">
+
+    <Page.DataContext>
+        <vm:ChoosePlaceViewModel/>
+    </Page.DataContext>
+    
+    <Grid Background="Transparent">
+        <Border MinWidth="200" MinHeight="200" Margin="15,0,15,0" VerticalAlignment="Center" Padding="30" MaxWidth="500" CornerRadius="55" Background="#050B19" Height="900">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="25" Color="Transparent" ShadowDepth="3"/>
+            </Border.Effect>
+        </Border>
+
+        <!--Time, Dynamic, Wi-fi...-->
+        <Label x:Name="Time" Margin="75,35,0,833" Foreground="#B3B3B3"  HorizontalAlignment="Left" FontSize="20" FontFamily="San Francisco" FontWeight="SemiBold"/>
+        <Image Source="/Photos/DynamicIsland.png" Stretch="Fill" Margin="155,26,155,824"/>
+        <Image Source="/Photos/Wi-fi.png" Stretch="Fill" Margin="345,39,43,837"/>
+        <Button Command="{Binding CloseCommand}" Style="{StaticResource TransparentButtonStyle}" Cursor="Hand" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" HorizontalAlignment="Center" Margin="0,878,0,10">
+            <Image Source="/Photos/HomeBar.png" Stretch="Fill" Height="10" Width="188" />
+        </Button>
+        <!--Time, Dynamic, Wi-fi...-->
+
+        <!--Button 'Back'-->
+        <Button Command="{Binding BackCommand}" Margin="60,93,319,775" Cursor="Hand" Content="  Back" Background="Transparent" BorderBrush="Transparent" Foreground="#B10808" FontFamily="Roboto" FontSize="16" Style="{StaticResource TransparentButtonStyle}"/>
+        <Image Source="/Photos/Back.png" Stretch="Fill" VerticalAlignment="Top" Margin="0,97,381,0" Height="24" HorizontalAlignment="Right" Width="24"/>
+        <!--Button 'Back'-->
+
+        <Label Content="A Quiet Place: Day One" VerticalAlignment="Top" Foreground="#EEEEEE" FontFamily="Roboto" FontSize="16" Margin="149,94,149,0"/>
+        <Label Content="1.10 - 7.10" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Roboto" FontSize="12" Foreground="#EEEEEE" Margin="65,153,0,0"/>
+        <Button Cursor="Hand" Content="Select date" Margin="345,153,43,728" FontFamily="Roboto" FontSize="12" Foreground="#EEEEEE" HorizontalAlignment="Center" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}" Click="Button_Click"/>
+        <Label Content="Session time" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Roboto" FontSize="12" Foreground="#EEEEEE" Margin="65,293,0,0"/>
+
+        <!--Button 'Session Time'-->
+        <Border x:Name="Border1" CornerRadius="6" Background="#1D1F2B" Margin="65,333,333,526" Width="72" Height="41">
+            <Button x:Name="Button1" Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Click="Button_Click_1" Style="{StaticResource TransparentButtonStyle}"/>
+        </Border>
+        <Border x:Name="Border2" CornerRadius="6" Background="#1D1F2B" Margin="155,333,243,526" Width="72" Height="41">
+            <Button x:Name="Button2" Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}" Click="Button_Click_2"/>
+        </Border>
+        <Label Content="12:00" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Roboto" FontSize="14" Foreground="#EEEEEE" Margin="79,333,0,0"/>
+        <Label Content="3D" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Roboto" FontSize="10" Foreground="#EEEEEE" Margin="90,352,0,0"/>
+        <Label Content="14:00" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Roboto" FontSize="14" Foreground="#EEEEEE" Margin="169,333,0,0"/>
+        <Label Content="2D" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Roboto" FontSize="10" Foreground="#EEEEEE" Margin="180,352,0,0"/>
+        <!--Button 'Session Time'-->
+
+        <!--Screen-->
+        <Image Source="/Photos/Screen.png" Stretch="Fill" Margin="93,404,0,440" HorizontalAlignment="Left" Width="300"/>
+        <Label Content="Screen" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Roboto" FontSize="12" Foreground="#EEEEEE" Margin="220,436,0,0"/>
+        <!--Screen-->
+
+        <!--Tickets-->
+        <Image Source="/Photos/ChooseTicketGray.png" Stretch="Fill" Margin="65,201,363,639" Width="42" Height="60"/>
+        <Image Source="/Photos/ChooseTicketGray.png" Stretch="Fill" Margin="119,201,309,639" Width="42" Height="60"/>
+        <Image Source="/Photos/ChooseTicketRed.png" Stretch="Fill" Margin="170,201,258,639" Width="42" Height="60"/>
+        <Image Source="/Photos/ChooseTicketGray.png" Stretch="Fill" Margin="222,201,206,639" Width="42" Height="60"/>
+        <Image Source="/Photos/ChooseTicketGray.png" Stretch="Fill" Margin="273,201,155,639" Width="42" Height="60"/>
+        <Image Source="/Photos/ChooseTicketGray.png" Stretch="Fill" Margin="323,201,105,639" Width="42" Height="60"/>
+        <Image Source="/Photos/ChooseTicketGray.png" Stretch="Fill" Margin="375,201,53,639" Width="42" Height="60"/>
+        <!--Tickets-->
+
+        <!--Date-->
+        <Label Content="Mond" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Roboto" FontSize="8" Foreground="#EEEEEE" Margin="71,213,0,0"/>
+        <Label Content="Tue" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Roboto" FontSize="8" Foreground="#EEEEEE" Margin="128,213,0,0"/>
+        <Label Content="Wedn" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Roboto" FontSize="8" Foreground="#EEEEEE" Margin="176,213,0,0"/>
+        <Label Content="Thu" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Roboto" FontSize="8" Foreground="#EEEEEE" Margin="231,213,0,0"/>
+        <Label Content="Fri" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Roboto" FontSize="8" Foreground="#EEEEEE" Margin="284,213,0,0"/>
+        <Label Content="Sat" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Roboto" FontSize="8" Foreground="#EEEEEE" Margin="333,213,0,0"/>
+        <Label Content="Sund" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Roboto" FontSize="8" Foreground="#EEEEEE" Margin="382,213,0,0"/>
+        <!--Date-->
+
+        <!--Number-->
+        <Label Content="1" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Roboto" FontSize="14" Foreground="#EEEEEE" Margin="77,234,0,0"/>
+        <Label Content="2" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Roboto" FontSize="14" Foreground="#EEEEEE" Margin="131,234,0,0"/>
+        <Label Content="3" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Roboto" FontSize="14" Foreground="#EEEEEE" Margin="182,234,0,0"/>
+        <Label Content="4" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Roboto" FontSize="14" Foreground="#EEEEEE" Margin="234,234,0,0"/>
+        <Label Content="5" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Roboto" FontSize="14" Foreground="#EEEEEE" Margin="285,234,0,0"/>
+        <Label Content="6" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Roboto" FontSize="14" Foreground="#EEEEEE" Margin="335,234,0,0"/>
+        <Label Content="7" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Roboto" FontSize="14" Foreground="#EEEEEE" Margin="387,234,0,0"/>
+        <!--Number-->
+
+
+        <!--first row-->
+        <Label Content="1" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Roboto" FontSize="10" Foreground="#D9D9D9" Margin="151,501,0,0"/>
+        <Border CornerRadius="6" Background="#1D1F2B" Margin="172,500,274,376" Width="24" Height="24">
+            <Button Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}"/>
+        </Border>
+        <Border CornerRadius="6" Background="#1D1F2B" Margin="203,500,243,376" Width="24" Height="24">
+            <Button Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}"/>
+        </Border>
+        <Border CornerRadius="6" Background="#1D1F2B" Margin="235,500,211,376" Width="24" Height="24">
+            <Button Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}"/>
+        </Border>
+        <Border CornerRadius="6" Background="#1D1F2B" Margin="268,500,178,376" Width="24" Height="24">
+            <Button Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}"/>
+        </Border>
+        <Border CornerRadius="6" Background="#1D1F2B" Margin="300,500,146,376" Width="24" Height="24">
+            <Button Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}"/>
+        </Border>
+        <!--first row-->
+
+        <!--second line-->
+        <Label Content="2" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Roboto" FontSize="10" Foreground="#D9D9D9" Margin="119,533,0,0"/>
+        <Border CornerRadius="6" Background="#700606" Margin="332,532,114,344" Width="24" Height="24">
+            <Button Cursor="Hand" x:Name="Butt24" FontFamily="Roboto" FontSize="10" Foreground="#D9D9D9" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}" Click="Butt24_Click"/>
+        </Border>
+        <Border CornerRadius="6" Background="#700606" Margin="300,532,146,344" Width="24" Height="24">
+            <Button Cursor="Hand" x:Name="Butt23" FontFamily="Roboto" FontSize="10" Foreground="#D9D9D9" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}" Click="Butt23_Click"/>
+        </Border>
+        <Border CornerRadius="6" Background="#700606" Margin="268,532,178,344" Width="24" Height="24">
+            <Button x:Name="Butt22" FontFamily="Roboto" FontSize="10" Cursor="Hand" Foreground="#D9D9D9" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}" Click="Butt22_Click"/>
+        </Border>
+        <Border CornerRadius="6" Background="#1D1F2B" Margin="236,532,210,344" Width="24" Height="24">
+            <Button Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}"/>
+        </Border>
+        <Border CornerRadius="6" Background="#1D1F2B" Margin="203,532,243,344" Width="24" Height="24">
+            <Button Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}"/>
+        </Border>
+        <Border CornerRadius="6" Background="#700606" Margin="172,532,274,344" Width="24" Height="24">
+            <Button x:Name="Butt21" FontFamily="Roboto" FontSize="10" Foreground="#D9D9D9" Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}" Click="Button_Click_3"/>
+        </Border>
+        <Border CornerRadius="6" Background="#1D1F2B" Margin="140,532,306,344" Width="24" Height="24">
+            <Button Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}"/>
+        </Border>
+
+        <!--second line-->
+
+        <!--3 line-->
+        <Label Content="3" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Roboto" FontSize="10" Foreground="#D9D9D9" Margin="87,581,0,0"/>
+        <Border CornerRadius="6" Background="#1D1F2B" Margin="108,580,338,296" Width="24" Height="24">
+            <Button Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}"/>
+        </Border>
+        <Border CornerRadius="6" Background="#1D1F2B" Margin="140,580,306,296" Width="24" Height="24">
+            <Button Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}"/>
+        </Border>
+        <Border CornerRadius="6" Background="#1D1F2B" Margin="173,580,273,296" Width="24" Height="24">
+            <Button Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}"/>
+        </Border>
+        <Border CornerRadius="6" Background="#1D1F2B" Margin="205,580,241,296" Width="24" Height="24">
+            <Button Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}"/>
+        </Border>
+        <Border CornerRadius="6" Background="#1D1F2B" Margin="237,580,209,296" Width="24" Height="24">
+            <Button Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}"/>
+        </Border>
+        <Border CornerRadius="6" Background="#1D1F2B" Margin="269,580,177,296" Width="24" Height="24">
+            <Button Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}"/>
+        </Border>
+        <Border CornerRadius="6" Background="#1D1F2B" Margin="302,580,144,296" Width="24" Height="24">
+            <Button Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}"/>
+        </Border>
+        <Border CornerRadius="6" Background="#1D1F2B" Margin="334,580,112,296" Width="24" Height="24">
+            <Button Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}"/>
+        </Border>
+        <Border CornerRadius="6" Background="#1D1F2B" Margin="366,580,80,296" Width="24" Height="24">
+            <Button Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}"/>
+        </Border>
+        <!--3 line-->
+
+        <!--4 line-->
+        <Label Content="4" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Roboto" FontSize="10" Foreground="#D9D9D9" Margin="87,613,0,0"/>
+        <Border CornerRadius="6" Background="#1D1F2B" Margin="108,612,338,264" Width="24" Height="24">
+            <Button Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}"/>
+        </Border>
+        <Border CornerRadius="6" Background="#700606" Margin="140,612,306,264" Width="24" Height="24">
+            <Button x:Name="Butt41" FontFamily="Roboto" FontSize="10" Foreground="#D9D9D9" Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}" Click="Butt41_Click"/>
+        </Border>
+        <Border CornerRadius="6" Background="#1D1F2B" Margin="173,612,273,264" Width="24" Height="24">
+            <Button Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}"/>
+        </Border>
+        <Border CornerRadius="6" Background="#1D1F2B" Margin="205,612,241,264" Width="24" Height="24">
+            <Button Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}"/>
+        </Border>
+        <Border CornerRadius="6" Background="#1D1F2B" Margin="237,612,209,264" Width="24" Height="24">
+            <Button Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}"/>
+        </Border>
+        <Border CornerRadius="6" Background="#1D1F2B" Margin="269,612,177,264" Width="24" Height="24">
+            <Button Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}"/>
+        </Border>
+        <Border CornerRadius="6" Background="#1D1F2B" Margin="302,612,144,264" Width="24" Height="24">
+            <Button Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}"/>
+        </Border>
+        <Border CornerRadius="6" Background="#1D1F2B" Margin="334,612,112,264" Width="24" Height="24">
+            <Button Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}"/>
+        </Border>
+        <Border CornerRadius="6" Background="#1D1F2B" Margin="366,612,80,264" Width="24" Height="24">
+            <Button Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}"/>
+        </Border>
+        <!--4 line-->
+
+        <!--5 line-->
+        <Label Content="5" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Roboto" FontSize="10" Foreground="#D9D9D9" Margin="151,646,0,0"/>
+        <Border CornerRadius="6" Background="#1D1F2B" Margin="173,644,273,232" Width="24" Height="24">
+            <Button Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}"/>
+        </Border>
+        <Border CornerRadius="6" Background="#1D1F2B" Margin="205,644,241,232" Width="24" Height="24">
+            <Button Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}"/>
+        </Border>
+        <Border CornerRadius="6" Background="#700606" Margin="237,644,209,232" Width="24" Height="24">
+            <Button x:Name="Butt51" FontFamily="Roboto" FontSize="10" Foreground="#D9D9D9" Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}" Click="Butt51_Click"/>
+        </Border>
+        <Border CornerRadius="6" Background="#700606" Margin="269,644,177,232" Width="24" Height="24">
+            <Button x:Name="Butt52" FontFamily="Roboto" FontSize="10" Foreground="#D9D9D9" Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}" Click="Butt52_Click"/>
+        </Border>
+        <Border CornerRadius="6" Background="#1D1F2B" Margin="302,644,144,232" Width="24" Height="24">
+            <Button Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}"/>
+        </Border>
+        <!--5 line-->
+
+        <!--6 line-->
+        <Label Content="6" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Roboto" FontSize="10" Foreground="#D9D9D9" Margin="87,676,0,0"/>
+        <Border CornerRadius="6" Background="#1D1F2B" Margin="108,676,338,200" Width="24" Height="24">
+            <Button Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}"/>
+        </Border>
+        <Border CornerRadius="6" Background="#1D1F2B" Margin="140,676,306,200" Width="24" Height="24">
+            <Button Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}"/>
+        </Border>
+        <Border CornerRadius="6" Background="#700606" Margin="173,676,273,200" Width="24" Height="24">
+            <Button x:Name="Butt61" FontFamily="Roboto" FontSize="10" Foreground="#D9D9D9" Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}" Click="Butt61_Click"/>
+        </Border>
+        <Border CornerRadius="6" Background="#700606" Margin="205,676,241,200" Width="24" Height="24">
+            <Button x:Name="Butt62" FontFamily="Roboto" FontSize="10" Foreground="#D9D9D9" Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}" Click="Butt62_Click"/>
+        </Border>
+        <Border CornerRadius="6" Background="#700606" Margin="237,676,209,200" Width="24" Height="24">
+            <Button x:Name="Butt63" FontFamily="Roboto" FontSize="10" Foreground="#D9D9D9" Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}" Click="Butt63_Click"/>
+        </Border>
+        <Border CornerRadius="6" Background="#1D1F2B" Margin="269,676,177,200" Width="24" Height="24">
+            <Button Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}"/>
+        </Border>
+        <Border CornerRadius="6" Background="#1D1F2B" Margin="302,676,144,200" Width="24" Height="24">
+            <Button Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}"/>
+        </Border>
+        <Border CornerRadius="6" Background="#1D1F2B" Margin="334,676,112,200" Width="24" Height="24">
+            <Button Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}"/>
+        </Border>
+        <Border CornerRadius="6" Background="#1D1F2B" Margin="366,676,80,200" Width="24" Height="24">
+            <Button Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}"/>
+        </Border>
+        <!--6 line-->
+
+        <!--7 line-->
+        <Label Content="7" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Roboto" FontSize="10" Foreground="#D9D9D9" Margin="87,709,0,0"/>
+        <Border CornerRadius="6" Background="#1D1F2B" Margin="108,708,306,168" Height="24">
+            <Button Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}"/>
+        </Border>
+        <Border CornerRadius="6" Background="#1D1F2B" Margin="222,707,192,169" Height="24">
+            <Button Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}"/>
+        </Border>
+        <Border CornerRadius="6" Background="#700606" Margin="334,708,80,168" Height="24">
+            <Button x:Name="Butt71" FontFamily="Roboto" FontSize="10" Foreground="#D9D9D9" Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource TransparentButtonStyle}" Click="Butt71_Click"/>
+        </Border>
+        <!--7 line-->
+
+        <!--Total price-->
+        <Label VerticalAlignment="Top" Content="Total" HorizontalAlignment="Left" FontFamily="Roboto" FontSize="18" Foreground="#D9D9D9" Margin="60,762,0,0"/>
+        <Label x:Name="totalLabel" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Roboto" FontSize="18" Foreground="#D9D9D9" Margin="335,761,0,0"/>
+        <!--Total price-->
+
+        <!--Button 'Buy'-->
+        <Border CornerRadius="6" Background="#B10808" Margin="60,813,53,47">
+            <Button Background="Transparent" Cursor="Hand" Content="Next" BorderBrush="Transparent" FontFamily="Roboto" Foreground="#EEEEEE" FontSize="18" Style="{StaticResource TransparentButtonStyle}" Click="Button_Click_4"/>
+        </Border>
+    </Grid>
+</Page>
